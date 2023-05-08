@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+/>
     <style>
         *{
             font-family: 'Poppins', sans-serif;
@@ -15,9 +17,20 @@
         .h-font{
             font-family: 'Merienda', cursive;
         }
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /*(Lỗi) Firefox 
+        input[type=number] {
+          -moz-appearance: textfield;
+        }*/
     </style>
 </head>
-<body>
+<body class="bg-light">
     <nav class="navbar navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 shadow-sm sticky-top">
   <div class="container-fluid">
     <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">TD Hotel</a>
@@ -89,26 +102,105 @@
                 <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <div class="mb-3">
-                  <label class="form-label">Email của bạn</label>
-                  <input type="email" class="form-control shadow-none">
+              <span class="badge bg-light text-dark mb-3 text-wrap lh-base">
+                Lưu ý: Thông tin chi tiết của bạn phải khớp với ID của bạn (thẻ CMND, hộ chiếu, bằng lái xe, v.v.) sẽ được yêu cầu khi nhận phòng
+              </span>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Tên</label>
+                    <input type="text" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-6 p-0">
+                    <label class="form-label">Email của bạn</label>
+                    <input type="email" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Số điện thoại</label>
+                    <input type="number" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Ảnh</label>
+                    <input type="file" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-12 p-0 mb-3">
+                    <label class="form-label">Địa chỉ</label>
+                    <textarea class="form-control shadow-none" rows="1"></textarea>
+                  </div>
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Mã PIN</label>
+                    <input type="number" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Ngày Sinh</label>
+                    <input type="date" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-6 ps-0 mb-3">
+                    <label class="form-label">Mật Khẩu</label>
+                    <input type="password" class="form-control shadow-none">
+                  </div>
+                  <div class="col-md-6 p-0 mb-3">
+                    <label class="form-label">Xác nhận mật khẩu</label>
+                    <input type="password" class="form-control shadow-none">
+                  </div>
+                </div>
+              </div>
+              <div class="text-center my-1">
+                <button type="submit" class = "btn btn-dark shadow-none">Đăng Ký</button>
+              </div>
+                <!--<div class="mb-3">
+                  
                 </div>
                 <div class="mb-4">
                   <label class="form-label">Mật Khẩu</label>
                   <input type="password" class="form-control shadow-none">
                 </div>
                 <div class="d-flex align-items-center justify-content-between mb-2">
-                  <button class = "btn btn-dark shadow-none">Đăng Nhập</button>
+                  
                   <a href="javascript: void(0)" class="text-secondary text-decoration-none">Quên Mật Khẩu</a>
-                </div>
+                </div>-->
               </div>
               
         </form>
       </div>
     </div>
   </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <div class="container-fluid px-lg-4 mt-4">
+    <div class="swiper swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/carousel/IMG_15372.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/carousel/IMG_40905.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/carousel/IMG_55677.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/carousel/IMG_62045.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/carousel/IMG_93127.png" class="w-100 d-block" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/carousel/IMG_99736.png" class="w-100 d-block" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper-container", {
+      spaceBetween: 30,
+      effect: "fade",
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      }
+    });
+  </script>
 </body>
 </html>
